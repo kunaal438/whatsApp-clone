@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Connect With Your Friends</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/chating.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="left-panel">
+        <nav class="navbar">
+                <div class="img-parent" style="margin-right: 10px; width: 40px; height: 40px">
+                        <img src="" id="userDP" class="sender-dp" alt="">
+                    </div>
+            <h2 class="greeting">kunaal</h2>
+            <a href="/profile" class="profileLink">profile</a>
+        </nav>
+        <div class="search-parent">
+            <input type="text" class="search-box" placeholder="Search User">
+        </div>
+
+        <div class="chatProfileBox" id="startingTab">
+            <!-- <div class="recieverProfile">
+                <div class="recieverProfile-img">
+                    <img src="../img/user.png" alt="">
+                </div>
+                <h2 class="recieverProfile-name">kunaal</h2>
+            </div> -->
+
+        </div>
+        <div class="chatProfileBox" id="searchTab">
+
+        </div>
+
+    </div>
+    <div class="right-panel">
+        <nav class="navbar profile">
+            <i class="fas fa-arrow-left back-btn"></i>
+            <div class="img-parent">
+                <img src="" id="recieverDP" class="sender-dp" alt="">
+            </div>
+            <p class="sender-name"></p>
+        </nav>
+        <div class="container">
+            
+        <div class="overlay"></div>
+            <!-- <div class="box-reciever">
+                    <p><span>00:00</span></p> 
+                </div>
+                <div class="box-sender">
+                    <p>hii<span>00:00</span></p>
+                </div> -->
+            <div class="inputs">
+                <div contenteditable="true" class="text-field" id="chatInput">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="../js/mainscreen.js"></script> -->
+    <script src="../js/chatscreen.js"></script>
+
+</body>
+
+</html>

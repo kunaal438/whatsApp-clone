@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background: url(https://wallpaperaccess.com/full/2224368.png);
+}
+
+.navbar{
+    height: 60px;
+    width: 100%;
+    padding: 10px 5vw;
+    background: rgb(5, 34, 53);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navbar .fas{
+    color: rgba(255, 255, 255, 0.719);
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.navbar .fas:hover,
+.navbar .fas:active{
+    background: rgba(255, 255, 255, 0.075);
+}
+
+.user-profile{
+    max-width: 400px;
+    min-height: 300px;
+    height: auto;
+    border-radius: 10px;
+    background: rgba(2, 82, 2, 0.836);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 1s all ease;
+    padding: 20px 20px 50px;
+}
+
+.user-dp{
+    position: relative;
+    border-radius: 50%;
+    min-width: 200px;
+    max-width: 200px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    background: transparent;
+}
+
+.user-dp img{
+    width: 400px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.edit{
+    width: 100%;
+    height: 30%;
+    background: rgba(0, 0, 0, 0.288);
+    position: absolute;
+    opacity: 0;
+    transition: .5s;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.user-dp:hover .edit{
+    opacity: 1;
+}
+
+.form{
+    width: calc(100% - 200px);
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-around; 
+    color: #fff;
+}
+
+.form label{
+    padding: 10px 0;
+    display: block;
+    color: #fff;
+    width: 50%;
+    margin: 20px 0 0;
+}
+
+.form input{
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    height: 30px;
+}
+
+.form input:focus{
+    outline: none;
+    color: #fff;
+}
+
+.form p{
+    color: rgba(255, 255, 255, 0.877);
+    font-size: 14px;
+}
+
+.editable{
+    display: flex;
+}
+
+.editable i{
+    width: 20%;
+    margin-left: auto;
+    cursor: pointer;
+    padding: 0 0 0 10px;
+}
+
+.name_inp{
+    width: 100px;
+    display: none;
+    color: #fff;
+}
+
+.update_btn{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    display: none;
+    margin: 30px auto 0;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.fa-times{
+    display: none;
+}
+
+#porfilePicInput{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 100px;
+    cursor: pointer;
+    outline: none;
+    /* visibility: hidden; */
+}

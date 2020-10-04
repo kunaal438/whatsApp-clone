@@ -1,0 +1,373 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+::-webkit-scrollbar{
+    width: 7px;
+    scrollbar-width: 7px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.left-panel{
+    width: 25%;
+    min-width: 300px;
+    height: 100vh;
+    background: rgb(5, 34, 53);
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    z-index: 4;
+}
+
+.right-panel{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(https://wallpaperaccess.com/full/2224368.png);
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(https://wallpaperaccess.com/full/2224368.png);
+    z-index: 3;
+}
+
+.right-panel .navbar{
+    width: 100%;
+    height: 60px;
+    background: rgb(5, 34, 53);
+}
+
+.left-panel .navbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.left-panel .navbar .greeting{
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.left-panel .navbar .profileLink{
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    position: absolute;
+    right: 10px;
+}
+
+.search-parent{
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+}
+
+.search-box{
+    width: 90%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    display: block;
+    margin: 0 auto 10px;
+    padding: 0 30px;
+    letter-spacing: 1px;
+}
+
+.search-box:focus{
+    outline: none;
+}
+
+.chatProfileBox{
+    width: 100%;
+    height: auto;
+    background: transparent;
+    display: block;
+    position: relative;
+    margin-top: -10px;
+}
+
+.recieverProfile{
+    width: 100%;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+}
+
+.recieverProfile:hover{
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.recieverProfile:first-child{
+    margin-top: 10px;
+}
+
+.recieverProfile-img{
+    max-width: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 20px;
+}
+
+.recieverProfile-img img{
+    position: absolute;
+    width: 200%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    font-size: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.recieverProfile-name{
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.profile{
+    width: 100%;
+    height: 60px;
+    background: rgb(5, 34, 53);
+    position: relative;
+    z-index: 2;
+    padding: 5px 5vw;
+}
+
+.img-parent{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.sender-dp{
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.sender-name{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: calc(5vw + 50px);
+    transform: translateY(-50%);
+    margin-left: 20px;
+    text-transform: capitalize;
+}
+
+.profileLink{
+    color: #fff;
+    position: absolute;
+    right: 5vw;
+    top: 50%;
+    text-transform: capitalize;
+    text-decoration: none;
+    transform: translateY(-50%);
+}
+
+.profileLink:hover{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.container{
+    width: 100%;
+    height: calc(100vh - 140px);
+    overflow-y: scroll;
+    padding: 0 5vw;
+    margin-top: 10px;
+    position: relative;
+}
+
+.box-reciever,
+.box-sender{
+    position: relative;
+    max-width: 50vw;
+    width:fit-content; 
+    min-width: 270px;
+    height: auto;
+    padding: 10px 20px;
+    background: rgb(255, 255, 255);
+    border-radius: 30px;
+    margin: 20px 0;
+    z-index: 1;
+    word-break: break-word;
+}
+
+.box-sender{
+    border-top-right-radius: 0;
+}
+
+.box-reciever{
+    border-top-left-radius: 0;
+}
+
+.box-reciever span,
+.box-sender span{
+    display: block;
+    text-align: right;
+    color: #2f2f2f;
+    font-size: 14px;
+    margin-top: 5px;
+    user-select: none;
+}
+
+.box-sender{
+    display: block;
+    margin-left: auto;
+    background: rgb(160, 255, 104);
+}
+
+.inputs{
+    width: 80%;
+    padding: 15px 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 2;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background: rgb(5, 34, 53);
+}
+
+.text-field{
+    width: 100%;
+    min-height: 40px;
+    max-height: 90vh;
+    overflow-y: scroll;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    color: #000;
+    background: rgb(236, 236, 236);
+    position: relative;
+    overflow: hidden;
+}
+
+.text-field::before{
+    content: 'type your message...............';
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    text-transform: capitalize;
+    color: #8b8b8b;
+}
+
+.text-field:focus{
+    outline: none;
+}
+
+.text-field:focus::before{
+    display: none;
+}
+
+.send-btn{
+    background: rgb(2, 163, 15);
+    color: #fff;
+    border: none;
+    z-index: 2;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 18px;
+    position: relative;
+    text-align: center;
+}
+
+.send-btn:focus{
+    outline: none;
+}
+
+.back-btn{
+    display: none;
+}
+
+@media screen and (max-width:700px){
+    .container{
+        padding: 0 5vw;
+    }
+}
+
+
+@media screen and (max-width: 996px){
+    .left-panel{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        /* display: none; */
+    }
+    .right-panel{
+        width: 100%;
+    }
+    .inputs{
+        width: 100%;
+    }
+
+    .back-btn{
+        display: block;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 3vw;
+        text-align: center;
+        line-height: 2.5;
+        cursor: pointer;
+        z-index: 4;
+        transform: translateY(-50%);
+    }
+    .back-btn:hover{
+        background: rgba(255, 255, 255, 0.2);
+    }
+    .navbar.profile .img-parent{
+        margin-left: 30px;
+    }
+    .navbar.profile .sender-name{
+        margin-left: 40px;
+    }
+}

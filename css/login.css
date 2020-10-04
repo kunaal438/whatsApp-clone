@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: url(https://wallpaperaccess.com/full/2224368.png);
+}
+
+::-webkit-input-placeholder{
+    color: rgba(255, 255, 255, 0.767);
+    text-transform: capitalize;
+    user-select: none;
+}
+
+.login_form{
+    width: 300px;
+    height: 400px;
+    background: rgba(2, 82, 2, 0.836);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: rgb(11, 238, 60);
+    text-align: center;
+    padding: 20px;
+}
+
+.sign_up_heading{
+    text-transform: capitalize;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    user-select: none;
+}
+
+label,
+input{
+    text-align: left;
+    display: block;
+    width: 100%;
+    height: 25px;
+}
+
+label{
+    user-select: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    color: #fff;
+    margin: 20px 0 10px;
+}
+
+input{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0.767);
+    position: relative;
+    letter-spacing: 1px;
+    padding: 0 10px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.sign_up_btn{
+    padding: 10px 15px;
+    text-transform: capitalize;
+    display: block;
+    margin: 40px auto 20px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    transition: .2s all ease;
+    backface-visibility: hidden;
+    user-select: none;
+}
+
+.sign_up_btn:hover{
+    background: rgb(11, 238, 60);
+    color: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+.sign_up_btn:focus{
+    outline: none;
+}
+
+.resgister_btn{
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+}
+
+.resgister_btn:hover{
+    color: rgba(255, 255, 255, 0.808)
+}

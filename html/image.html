@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Upload image to server</title>
+
+    <link rel="stylesheet" href="../css/imgUpload.css">
+
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="img-box">
+            <img src="../img/user.png" alt="" class="profile-img">
+        </div>
+        <form class="form" enctype="multipart/form-data">
+            <label class="dp">profile pic</label>
+            <input type="file" accept=".jpg,.png,.jpeg" name="" class="porfilePicInput">
+            <div class="btn-group">
+                <button type="submit" class="btn skip_btn">skip...</button>
+                <button type="submit" class="btn set_btn">set...</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/uploadingImage.js"></script>
+
+</body>
+
+</html>
